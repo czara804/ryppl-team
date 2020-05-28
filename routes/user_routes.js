@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const {} = require("")
 
 // view all users
 router.get("/", getUsers)

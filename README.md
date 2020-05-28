@@ -23,7 +23,7 @@ User:
  - photo??
 
 Drop:
- - owned by user
+ - username
  - title
  - description
  - date_ created
@@ -32,6 +32,7 @@ Drop:
  - photo
  - category
  - steps, array
+ 
 
  2nd release:
   - likes (adopt someone else's drop)
