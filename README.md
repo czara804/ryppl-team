@@ -1,5 +1,5 @@
 
-Hackathon - Ryppl Team
+Hackathon - Ryppl Team YaY!
 
 # Express Server Template
 
