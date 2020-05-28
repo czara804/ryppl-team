@@ -1,3 +1,6 @@
+
+Hackathon - Ryppl Team
+
 # Express Server Template
 
 Template express server created by Code Like a Girl / Gentech team.
