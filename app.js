@@ -2,7 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose")
-
+const userRouter = require("./routes/user_routes")
+const dropRouter = require("./routes/drop_routes")
 // Sets port if deploying to external provider 
 // or port assigned already
 const port = process.env.port || 3030;
@@ -30,6 +31,9 @@ mongoose.connect(
         }
     }
 )
+
+app.use("/user", userRouter)
+app.use("/drops", dropRouter)
 // Define a simple route for GET
 app.get("/",(req,res) => {
     res.send("Hi from your Express Server. From past you. You are awesome.")
