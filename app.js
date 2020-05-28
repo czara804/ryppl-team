@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose")
 
 // Sets port if deploying to external provider 
 // or port assigned already
@@ -13,6 +14,22 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+const dbConn = "mongodb://localhost/ryppl"
+mongoose.connect(
+    dbConn,
+    {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+    },
+    err => {
+        if (err) {
+            console.log("Error connecting to database", err)
+        } else {
+            console.log("Connected to database!")
+        }
+    }
+)
 // Define a simple route for GET
 app.get("/",(req,res) => {
     res.send("Hi from your Express Server. From past you. You are awesome.")
