@@ -32,12 +32,12 @@ mongoose.connect(
     }
 )
 
-app.use("/user", userRouter)
+// app.use("/user", userRouter)
 app.use("/drops", dropRouter)
 // Define a simple route for GET
 app.get("/",(req,res) => {
-    res.send("Hi from your Express Server. From past you. You are awesome.")
+    res.send("Hi from your Express Server.")
 });
 
 // Listen
-app.listen(port, () => console.log(`Listening on port ${port}. Arrr.`));
+app.listen(port, () => console.log(`Listening on port ${port}.`));
