@@ -10,3 +10,22 @@ content-type: application/json
 	  "description": "Eiffel tower",
 	  "category": "travel"
 }
+
+### GET all drops
+GET http://localhost:3030/drops/
+
+### GET a single drop
+GET http://localhost:3030/drops/5ed05d8e12158b12cfa2d317
+
+### update a drop
+PUT http://localhost:3030/drops/5ed05d8e12158b12cfa2d317
+
+{
+    "username": "CassTest",
+    "title": "Paris",
+	  "description": "Eiffel tower",
+	  "category": "travel"
+}
+
+### delete a drop
+DELETE http://localhost:3030/drops/5ed05d8e12158b12cfa2d317
