@@ -27,18 +27,24 @@ function addDrop(drop) {
 function addDropToList(drop, list) {
 	let dropDiv = document.createElement("div")
     dropDiv.classList.add("drop")
-    dropDiv.appendChild(drop)
     let title = document.createElement("div")
     title.textContent = drop.title
     dropDiv.appendChild(title)
     title.classList.add("title")
+    let category = document.createElement("div")
+    category.textContent = drop.category
+    category.classList.add("category")
+    dropDiv.appendChild(category)
     let description = document.createElement("div")
     description.textContent = drop.description
     description.classList.add("description")
     dropDiv.appendChild(description)
+
+    list.appendChild(dropDiv)
 }
 
 function showDropList(drops, list) {
+    console.log(drops);
 	list.innerHTML = null
 	for(let drop of drops) {
 		// add student to the studentList div
@@ -49,13 +55,16 @@ function showDropList(drops, list) {
 function handleAddDrop(event) {
 	event.preventDefault()
     let textField = event.target.elements[0]
-    let description = event.target.element[1]
+    let category = event.target.elements[1]
+    let description = event.target.elements[2]
     const drop = {
         title:textField.value,
+        category:category.value,
         description:description.value,
     }
 	addDrop(drop)
     textField.value = null
+    category.value = null
     description.value = null
 	addDropToList(drop, dropList)
 }
