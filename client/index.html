@@ -9,9 +9,34 @@
 			margin-left: 1em;
 		}
 		#drop-list {
-			display: flex;
-			flex-direction: column;
-			margin-left: 1em;
+			display: grid;
+  			grid-template-columns: 33% 33% 33%;
+			grid-gap: 10px;
+ 		 	background-color: rgba(194, 131, 154, 1);
+  			width: 100%;
+		}
+		.drop {
+			margin: 0.8em;
+  			background-color: rgba(237, 219, 226, 1);
+  			min-height: 150px;
+  			padding: 10px;
+  			text-align: left;
+  			color: rgba(47, 33, 34, 1);
+			border-radius: 5px;
+			padding: 20px;
+		}
+		.title {
+			font-size: 120%;
+			font-weight: bold;
+			padding:0.7em 0 0.7em 0;
+		}
+		.category {
+			padding:0.5em 0 0.5em 0;
+		}
+		.description {
+			background-color: rgba(194, 131, 154, 1);
+			border-radius: 5px;
+			padding: 0.8em;
 		}
 		#drops {
 			width: 100px;
@@ -30,7 +55,8 @@
 		input[id="drop-category"] {
             width:100%;
         }
-		
+
+
 	</style>
 </head>
 <body>
