@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const {makeDrop} = require("../controllers/drops_controller")
 
 // view all drops
 // router.get("/", getDrops)
@@ -9,7 +10,7 @@ const router = express.Router()
 
 // // make new drop 
 // //CREATE
-// router.post("/", addDrop)
+router.post("/", makeDrop)
 
 // //delete drop 
 // router.delete("/:id", removerDrop)
@@ -19,10 +20,3 @@ const router = express.Router()
 
 module.exports = router;
 
-
-
-
-
-
-
-module.exports = router;

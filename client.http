@@ -1,3 +1,12 @@
 // HTTP requests here
 
 ###
+POST http://localhost:3030/drops
+content-type: application/json
+
+{
+    "username": "CassTest",
+    "title": "Paris",
+	  "description": "Eiffel tower",
+	  "category": "travel"
+}
