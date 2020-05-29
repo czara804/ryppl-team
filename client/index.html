@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Drops in the Bucketlist</title>
+	<style>
+		body {
+			margin-left: 1em;
+		}
+		#drop-list {
+			display: flex;
+			flex-direction: column;
+			margin-left: 1em;
+		}
+		#drops {
+			width: 100px;
+			height: 1.5em;
+		}
+		#add-drop-form {
+			margin: 1em;
+		}
+        input[id="drop-body"] {
+            width:100%;
+            height: 130px;
+        }
+        input[id="drop-title"] {
+            width:100%;
+        }
+	</style>
+</head>
+<body>
+	<h1>Drops</h1>
+	<div id="drops-list"></div>
+	<form id="add-drop-form">
+        Title <br>
+        <input type="text" id="drop-title" required></input><br>
+        Description <br>
+        <input type="text" id="drop-body" required></input>
+        Upload photo <br>
+        <input type="file" id="drop-photo"></input><br>
+		<input type="submit" id="add-drop" value="Add drop"></input>
+	</form>
+<script src="script.js"></script>	
+</body>
+</html>
