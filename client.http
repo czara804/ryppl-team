@@ -7,8 +7,8 @@ content-type: application/json
 {
     "username": "CassTest",
     "title": "Paris",
-	  "description": "Eiffel tower",
-	  "category": "travel"
+	"description": "Eiffel tower",
+	"category": "travel"
 }
 
 ### GET all drops

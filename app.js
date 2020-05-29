@@ -15,19 +15,23 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const dbConn = "mongodb://localhost/ryppl"
-mongoose.connect(
-    dbConn,
-    {
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config();
+}
+
+const dbConn = process.env.MONGODB_URI //|| "mongodb://localhost/ryppl"
+console.log(dbConn)
+mongoose.connect(dbConn,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useCreateIndex: true
     },
     err => {
         if (err) {
             console.log("Error connecting to database", err)
         } else {
-            console.log("Connected to database!")
+            console.log("Connected to database!", dbConn)
         }
     }
 )
