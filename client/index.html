@@ -7,17 +7,23 @@
 	<style>
 		body {
 			margin-left: 1em;
+			background-color:   rgb(179, 222, 235);
+		}
+		h1 {
+			color: rgba(47, 33, 34, 1);
+			text-align: center;
+			padding: 1em;
 		}
 		#drop-list {
 			display: grid;
-  			grid-template-columns: 33% 33% 33%;
+  			grid-template-columns: 32.5% 32.5% 32.5%;
 			grid-gap: 10px;
- 		 	background-color: rgba(194, 131, 154, 1);
+ 		 	background-color: rgb(131, 190, 194);
   			width: 100%;
 		}
 		.drop {
 			margin: 0.8em;
-  			background-color: rgba(237, 219, 226, 1);
+  			background-color: rgb(179, 222, 235);
   			min-height: 150px;
   			padding: 10px;
   			text-align: left;
@@ -34,7 +40,7 @@
 			padding:0.5em 0 0.5em 0;
 		}
 		.description {
-			background-color: rgba(194, 131, 154, 1);
+			background-color: rgb(131, 190, 194);
 			border-radius: 5px;
 			padding: 0.8em;
 		}
@@ -43,24 +49,27 @@
 			height: 1.5em;
 		}
 		#add-drop-form {
-			margin: 1em;
+			margin: 60px;
+  			padding: 0px 0 30px 0;
+  			color: rgba(47, 33, 34, 1);
+  			font-size: 150%;
+  			text-align: center;
 		}
         input[id="drop-body"] {
-            width:100%;
+            width:50%;
             height: 130px;
         }
         input[id="drop-title"] {
-            width:100%;
+            width:50%;
         }
 		input[id="drop-category"] {
-            width:100%;
+            width:50%;
         }
-
 
 	</style>
 </head>
 <body>
-	<h1>Drops</h1>
+	<h1>My Bucketlist</h1>
 	<div id="drop-list"></div>
 	<form id="add-drop-form">
         Title <br>
@@ -68,10 +77,10 @@
 		Category <br>
         <input type="text" id="drop-category" required></input><br>
         Description <br>
-        <input type="text" id="drop-body" required></input>
+        <input type="text" id="drop-body" required></input><br>
         Upload photo <br>
         <input type="file" id="drop-photo"></input><br>
-		<input type="submit" id="add-drop" value="Add drop"></input>
+		<input type="submit" id="add-drop" value="Add drop"></input><br>
 	</form>
 <script src="script.js"></script>	
 </body>
