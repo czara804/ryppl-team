@@ -29,3 +29,15 @@ PUT http://localhost:3030/drops/5ed05d8e12158b12cfa2d317
 
 ### delete a drop
 DELETE http://localhost:3030/drops/5ed05d8e12158b12cfa2d317
+
+###
+
+POST http://localhost:3030/auth/register
+content-type: application/json
+
+{
+    "username": "auto-tester1",
+    "email": "auto-tester1@abc.com",
+    "password": "abc123"
+}
+
