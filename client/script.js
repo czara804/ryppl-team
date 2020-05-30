@@ -24,13 +24,24 @@ function addDrop(drop) {
 	.catch((error) => console.error(error))
 }
 
+function deleteDrop(id) {
+    fetch(`${url}/drops/${id}`, {
+        method: "DELETE"
+    }).then ((response)=> {
+        console.log(response)
+        location.reload();
+    })
+    .catch((error) => console.error(error))
+}
+
 function addDropToList(drop, list) {
 	let dropDiv = document.createElement("div")
     dropDiv.classList.add("drop")
+
     let title = document.createElement("div")
     title.textContent = drop.title
-    dropDiv.appendChild(title)
     title.classList.add("title")
+    dropDiv.appendChild(title)
 
     let category = document.createElement("div")
     category.textContent = drop.category
@@ -47,8 +58,18 @@ function addDropToList(drop, list) {
     description.classList.add("description")
     dropDiv.appendChild(description)
 
+    let removeButton = document.createElement("button")
+    removeButton.textContent = "Delete"
+    removeButton.classList.add("button-class")
+    removeButton.id = drop._id
+    removeButton.addEventListener('click', () => deleteDrop(drop._id));
+
+    dropDiv.appendChild(removeButton)
+
     list.appendChild(dropDiv)
 }
+
+
 
 function showDropList(drops, list) {
     console.log(drops);
