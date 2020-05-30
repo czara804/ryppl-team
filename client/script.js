@@ -31,14 +31,17 @@ function addDropToList(drop, list) {
     title.textContent = drop.title
     dropDiv.appendChild(title)
     title.classList.add("title")
+
     let category = document.createElement("div")
     category.textContent = drop.category
     category.classList.add("category")
     dropDiv.appendChild(category)
+
     let username = document.createElement("div")
     username.textContent = drop.username
     username.classList.add("username")
     dropDiv.appendChild(username)
+
     let description = document.createElement("div")
     description.textContent = drop.description
     description.classList.add("description")
@@ -60,8 +63,8 @@ function handleAddDrop(event) {
 	event.preventDefault()
     let textField = event.target.elements[0]
     let category = event.target.elements[1]
-    let description = event.target.elements[2]
-    let username = event.target.elements[3]
+    let username = event.target.elements[2]
+    let description = event.target.elements[3]
     const drop = {
         title:textField.value,
         category:category.value,
